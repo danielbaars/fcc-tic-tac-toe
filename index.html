@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="A Tic Tac Toe Game built as part of Free Code Camp's 'Advanced Front End Development Projects', using Pug, Sass and Bootstrap 4.">
+    <meta name="author" content="Free Code Camp">
+    <meta name="robots" content="noindex, nofollow">
+    <title>FCC Build a Tic Tac Toe Game</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet prefetch" href="style.css">
+  </head>
+  <body class="tic-tac-toe">
+    <div class="ttt">
+      <div class="ttt__header">Tic Tac Toe</div>
+      <div class="ttt__board">
+        <div class="ttt__start ttt__messages">
+          <div class="ttt__start-msg" id="jsStartMessage">Pick your poison</div>
+        </div>
+        <div class="ttt__turns ttt__messages">
+          <div class="ttt__your-turn" id="jsHumanTurn">Your turn!</div>
+          <div class="ttt__computer-turn" id="jsCompuTurn">Computer's turn!</div>
+        </div>
+        <div class="ttt__wins ttt__messages">
+          <div class="ttt__draw" id="jsDraw">It's a draw!</div>
+          <div class="ttt__you-win" id="jsHumanWin">You win!</div>
+          <div class="ttt__computer-wins" id="jsCompuWin">Computer wins!</div>
+        </div>
+        <div class="ttt__score clearfix">
+          <button class="btn btn-sm ttt__back" id="jsBack">Go back</button>
+          <button class="btn btn-sm ttt__reset" id="jsReset">Reset</button>
+        </div>
+        <div class="ttt__xoro" id="jsXorO">
+          <h2 class="ttt__question">Would you like to be X or O?</h2>
+          <div class="ttt__choices">
+            <button class="btn" id="jsX">X</button>
+            <button class="btn" id="jsO">O</button>
+          </div>
+        </div>
+        <table>
+          <tr class="ttt__row ttt__row--1">
+            <td class="ttt__cell" id="jsA1"></td>
+            <td class="ttt__cell" id="jsB1"></td>
+            <td class="ttt__cell" id="jsC1"></td>
+          </tr>
+          <tr class="ttt__row ttt__row--2">
+            <td class="ttt__cell" id="jsA2"></td>
+            <td class="ttt__cell" id="jsB2"></td>
+            <td class="ttt__cell" id="jsC2"></td>
+          </tr>
+          <tr class="ttt__row ttt__row--3">
+            <td class="ttt__cell" id="jsA3"></td>
+            <td class="ttt__cell" id="jsB3"></td>
+            <td class="ttt__cell" id="jsC3"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+extends _default
+
+block head
+	- var pageTitle = 'FCC Build a Tic Tac Toe Game'
+	- var metaDescription = "A Tic Tac Toe Game built as part of Free Code Camp's 'Advanced Front End Development Projects', using Pug, Sass and Bootstrap 4."	
+	- var companyName = 'Free Code Camp'
+	- var bodyClass = 'tic-tac-toe'
+	- var googleFonts = 'Lato:400,700'
+	- var jsFile = 'index.js'
+	- var online = true
+	- var mathJS = false
+	- var momentJS = false
+	- var fontAwesome = false
+
+block content
+	.ttt
+		.ttt__header Tic Tac Toe
+		.ttt__board
+			.ttt__start.ttt__messages
+				.ttt__start-msg#jsStartMessage Pick your poison
+			.ttt__turns.ttt__messages
+				.ttt__your-turn#jsHumanTurn Your turn!
+				.ttt__computer-turn#jsCompuTurn Computer's turn!
+			.ttt__wins.ttt__messages
+				.ttt__draw#jsDraw It's a draw!
+				.ttt__you-win#jsHumanWin You win!
+				.ttt__computer-wins#jsCompuWin Computer wins!
+			.ttt__score.clearfix
+				button.btn.btn-sm.ttt__back#jsBack Go back
+				button.btn.btn-sm.ttt__reset#jsReset Reset
+			.ttt__xoro#jsXorO
+				h2.ttt__question Would you like to be X or O?
+				.ttt__choices
+					button.btn#jsX X
+					button.btn#jsO O
+			table
+				tr.ttt__row.ttt__row--1
+					td.ttt__cell#jsA1
+					td.ttt__cell#jsB1
+					td.ttt__cell#jsC1
+				tr.ttt__row.ttt__row--2
+					td.ttt__cell#jsA2
+					td.ttt__cell#jsB2
+					td.ttt__cell#jsC2
+				tr.ttt__row.ttt__row--3
+					td.ttt__cell#jsA3
+					td.ttt__cell#jsB3
+					td.ttt__cell#jsC3

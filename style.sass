@@ -1,0 +1,150 @@
+@function tint($color, $percent)
+	@return mix(#fff, $color, $percent)
+
+
+@function shade($color, $percent)
+	@return mix(#000, $color, $percent)
+
+@mixin padding($base, $ratio)
+	padding: ($base * $ratio) $base
+
+.clearfix:after 
+	content: ""
+	display: block
+	clear: both
+
+.btn
+	font-family: 'Lato', sans-serif
+	font-weight: 700
+	cursor: pointer
+	&:focus
+		outline: none
+
+body
+	padding: 40px
+
+.ttt
+	position: relative
+	font-family: 'Lato', sans-serif
+	text-align: center
+
+.ttt__header
+	font-size: 66px
+	font-weight: 700
+	line-height: 0.8
+	margin-bottom: 60px
+	text-align: center
+
+$base-padding: 30px
+$button-height: 27px
+$top-padding: 17px
+
+$message-height: 32px
+
+.ttt__messages
+	position: absolute
+	width: 100%
+	left: 0
+	top: -($message-height)
+	display: flex
+	padding: 0 30px
+	> div
+		position: relative
+		padding: 6px 11px
+		text-transform: uppercase
+		line-height: 1.1
+		color: white
+		height: $message-height
+
+.ttt__start
+	justify-content: center
+	> div
+		background-color: blue	
+
+.ttt__turns
+	justify-content: space-between
+	> div
+		visibility: hidden
+
+.ttt__wins
+	justify-content: center
+	> div
+		display: none
+		background-color: blue
+
+.ttt__your-turn
+	background-color: green
+
+.ttt__computer-turn
+	background-color: red
+
+.ttt__xoro
+	position: absolute
+	left: $base-padding
+	top: $base-padding
+	background-color: black
+	color: white
+	width: 330px
+	height: 361px
+	padding: $base-padding
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+
+
+.ttt__question
+	font-size: 40px
+	line-height: 1.2
+	margin-bottom: 24px
+
+.ttt__choices
+	display: flex
+	justify-content: space-between
+	align-items: center
+	width: 180px
+	.btn
+		width: 75px
+		font-size: 44px
+		text-transform: uppercase
+
+
+.ttt__board
+	position: relative
+	display: inline-block
+	background-color: brown
+	padding: $base-padding
+	padding-top: $top-padding
+	border-radius: 12px
+
+.ttt__score
+	margin-bottom: $top-padding
+	height: $button-height
+
+.ttt__back
+	visibility: hidden
+	float: left
+	text-transform: uppercase
+
+.ttt__reset
+	visibility: hidden
+	float: right
+	text-transform: uppercase
+
+.ttt__cell
+	$cell-width: 110px
+	background-color: black
+	color: white
+	width: $cell-width
+	height: $cell-width
+	text-align: center
+	font-size: 70px
+	border: 3px solid white
+	.ttt__row--1 &
+		border-top: none
+	.ttt__row--3 &
+		border-bottom: none
+	.ttt__row &:first-child
+		border-left: none
+	.ttt__row &:last-child
+		border-right: none		
